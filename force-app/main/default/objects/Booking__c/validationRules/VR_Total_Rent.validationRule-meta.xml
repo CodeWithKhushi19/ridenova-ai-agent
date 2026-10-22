@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Total_Rent</fullName>
+    <active>true</active>
+    <description>Ensures that the Total Rent is greater than zero.</description>
+    <errorConditionFormula>Total_Rent__c &lt;= 0</errorConditionFormula>
+    <errorDisplayField>Total_Rent__c</errorDisplayField>
+    <errorMessage>Total Rent must be greater than 0.</errorMessage>
+</ValidationRule>

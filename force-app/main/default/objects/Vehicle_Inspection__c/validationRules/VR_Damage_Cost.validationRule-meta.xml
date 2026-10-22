@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Damage_Cost</fullName>
+    <active>true</active>
+    <description>Ensures that Damage Cost is not negative.</description>
+    <errorConditionFormula>Damage_Cost__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Damage_Cost__c</errorDisplayField>
+    <errorMessage>Damage Cost cannot be negative.</errorMessage>
+</ValidationRule>

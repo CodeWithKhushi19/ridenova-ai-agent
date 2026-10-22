@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RideNova AI</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Cpath d='M6 20l3-7h14l3 7v4h-3v-2H9v2H6z' fill='white'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--brand)"/><path d="M6 20l3-7h14l3 7v4h-3v-2H9v2H6z" fill="#fff"/><circle cx="11" cy="20" r="1.6" fill="var(--brand)"/><circle cx="21" cy="20" r="1.6" fill="var(--brand)"/></svg>
+    <div><strong>RideNova AI</strong><span>Smart Booking &amp; Support Agent</span></div>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" id="tab-chat" aria-selected="true" class="tab active">Customer assistant</button>
+    <button role="tab" id="tab-admin" aria-selected="false" class="tab">Admin insights</button>
+  </nav>
+  <div class="chips"><span id="chip-data" class="chip">…</span><span id="chip-ai" class="chip">…</span></div>
+</header>
+<div id="banner" class="banner" hidden></div>
+
+<main id="view-chat" class="layout">
+  <aside class="side">
+    <section class="card">
+      <h2>Who are you?</h2>
+      <form id="identify-form">
+        <label for="email">Registered email</label>
+        <input id="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <button class="btn primary" id="identify-btn" type="submit">Continue</button>
+      </form>
+      <p id="identity-status" class="muted small" role="status">Not identified. You can browse vehicles without signing in; bookings and tickets need an email match.</p>
+      <div id="demo-hint" class="small muted" hidden>Demo customers: <button class="link" data-email="aarav@example.com">aarav@example.com</button> · <button class="link" data-email="priya@example.com">priya@example.com</button></div>
+    </section>
+    <section class="card">
+      <h2>Try asking</h2>
+      <div id="suggestions" class="suggestions"></div>
+    </section>
+    <section class="card small muted">
+      <strong>How it works.</strong> A language model picks tools and reads live records. Anything that changes data is shown to you first and only happens when you press <em>Confirm</em>.
+    </section>
+  </aside>
+
+  <section class="chat card" aria-label="Chat">
+    <div id="log" class="log" aria-live="polite"></div>
+    <form id="chat-form" class="composer">
+      <textarea id="input" rows="1" maxlength="1000" placeholder="Ask about vehicles, your bookings, or a problem…" aria-label="Message"></textarea>
+      <button class="btn primary" id="send" type="submit">Send</button>
+    </form>
+    <div class="foot"><button class="link" id="reset">Start a new conversation</button><span class="muted small">AI can make mistakes - check details before confirming.</span></div>
+  </section>
+</main>
+
+<main id="view-admin" class="admin" hidden>
+  <section class="card toolbar">
+    <form id="admin-form">
+      <label for="admin-token">Admin token</label>
+      <input id="admin-token" type="password" autocomplete="off" placeholder="Shown in the server console">
+      <button class="btn primary" type="submit">Load insights</button>
+      <button class="btn" type="button" id="ai-summary" disabled>AI summary</button>
+    </form>
+  </section>
+  <div id="admin-state" class="state" role="status">Enter the admin token to load pending bookings and open support tickets.</div>
+  <div id="admin-body" hidden>
+    <div id="admin-source" class="source"></div>
+    <div id="summary-box" class="card summary" hidden></div>
+    <div id="stats" class="stats"></div>
+    <div class="grid2">
+      <section class="card"><h2>Pending bookings</h2><div id="tbl-bookings" class="tablewrap"></div></section>
+      <section class="card"><h2>Open support tickets</h2><div id="tbl-tickets" class="tablewrap"></div></section>
+    </div>
+  </div>
+</main>
+<script src="/app.js" type="module"></script>
+</body>
+</html>

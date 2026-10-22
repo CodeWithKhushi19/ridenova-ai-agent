@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Daily_Rent_Positive</fullName>
+    <active>true</active>
+    <description>Ensures that the Daily Rent is greater than zero.</description>
+    <errorConditionFormula>Daily_Rent__c &lt;= 0</errorConditionFormula>
+    <errorDisplayField>Daily_Rent__c</errorDisplayField>
+    <errorMessage>Daily Rent must be greater than 0.</errorMessage>
+</ValidationRule>

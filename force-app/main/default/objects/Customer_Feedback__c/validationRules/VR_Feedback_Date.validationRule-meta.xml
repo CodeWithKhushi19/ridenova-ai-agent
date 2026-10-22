@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Feedback_Date</fullName>
+    <active>true</active>
+    <description>Ensures that the Feedback Date is not in the future.</description>
+    <errorConditionFormula>Feedback_Date__c &gt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Feedback_Date__c</errorDisplayField>
+    <errorMessage>Feedback Date cannot be in the future.</errorMessage>
+</ValidationRule>

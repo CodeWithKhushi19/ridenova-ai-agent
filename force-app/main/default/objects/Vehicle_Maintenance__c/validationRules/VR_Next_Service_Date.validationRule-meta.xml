@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Next_Service_Date</fullName>
+    <active>true</active>
+    <description>Ensures that the Next Service Date is after the Service Date.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Next_Service_Date__c)),
+Next_Service_Date__c &lt;= Service_Date__c
+)</errorConditionFormula>
+    <errorDisplayField>Next_Service_Date__c</errorDisplayField>
+    <errorMessage>Next Service Date must be after the Service Date.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Resolution_Date</fullName>
+    <active>true</active>
+    <description>Ensures that the Resolution Date is on or after the Ticket Date.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Resolution_Date__c)),
+Resolution_Date__c &lt; Ticket_Date__c
+)</errorConditionFormula>
+    <errorDisplayField>Resolution_Date__c</errorDisplayField>
+    <errorMessage>Resolution Date cannot be earlier than Ticket Date.</errorMessage>
+</ValidationRule>

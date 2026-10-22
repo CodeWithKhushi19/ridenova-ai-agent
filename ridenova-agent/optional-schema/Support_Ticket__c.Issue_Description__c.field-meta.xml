@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  OPTIONAL, ADDITIVE schema change (adds one field; changes/deletes nothing).
+  Why: Support_Ticket__c has no field for the customer's own description of the problem
+  (the only long-text field is Resolution_Notes__c, which is meant for staff resolutions).
+  Without this field the agent still creates tickets, but the free-text description is not stored.
+  To use: copy to force-app/main/default/objects/Support_Ticket__c/fields/Issue_Description__c.field-meta.xml,
+  deploy, then set TICKET_DESCRIPTION_FIELD=Issue_Description__c in .env.
+-->
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue_Description__c</fullName>
+    <label>Issue Description</label>
+    <type>LongTextArea</type>
+    <length>2000</length>
+    <visibleLines>5</visibleLines>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <description>Customer's own description of the problem, captured by the RideNova AI agent.</description>
+</CustomField>

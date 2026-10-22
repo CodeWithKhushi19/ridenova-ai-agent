@@ -1,0 +1,16 @@
+{
+  "name": "ridenova-agent",
+  "version": "1.0.0",
+  "description": "RideNova AI - Smart Booking and Support Agent (zero-dependency Node backend + web UI)",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "demo": "node server/index.js --demo",
+    "test": "node --test",
+    "check-llm": "node scripts/check-llm.js"
+  }
+}

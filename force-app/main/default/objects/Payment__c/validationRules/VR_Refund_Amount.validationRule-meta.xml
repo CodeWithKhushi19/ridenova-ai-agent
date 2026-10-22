@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Refund_Amount</fullName>
+    <active>true</active>
+    <description>Ensures that the Refund Amount does not exceed the Payment Amount.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Refund_Amount__c)),
+Refund_Amount__c &gt; Amount__c
+)</errorConditionFormula>
+    <errorDisplayField>Refund_Amount__c</errorDisplayField>
+    <errorMessage>Refund Amount cannot be greater than Payment Amount.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Service_Cost</fullName>
+    <active>true</active>
+    <description>Ensures that the Service Cost is greater than zero.</description>
+    <errorConditionFormula>Service_Cost__c &lt;= 0</errorConditionFormula>
+    <errorDisplayField>Service_Cost__c</errorDisplayField>
+    <errorMessage>Service Cost must be greater than 0.</errorMessage>
+</ValidationRule>

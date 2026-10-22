@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Pickup_Date</fullName>
+    <active>true</active>
+    <description>Ensures that the Pickup Date is on or after the Booking Date.</description>
+    <errorConditionFormula>Pickup_Date__c &lt; Booking_Date__c</errorConditionFormula>
+    <errorDisplayField>Pickup_Date__c</errorDisplayField>
+    <errorMessage>Pickup Date cannot be earlier than Booking Date.</errorMessage>
+</ValidationRule>

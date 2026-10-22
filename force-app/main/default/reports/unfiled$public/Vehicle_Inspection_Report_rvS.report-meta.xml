@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Vehicle_Inspection__c.Vehicle__c</field>
+    </columns>
+    <columns>
+        <field>Vehicle_Inspection__c.Booking__c</field>
+    </columns>
+    <columns>
+        <field>Vehicle_Inspection__c.Inspection_Date__c</field>
+    </columns>
+    <columns>
+        <field>Vehicle_Inspection__c.Vehicle_Condition__c</field>
+    </columns>
+    <columns>
+        <field>Vehicle_Inspection__c.Fuel_Level__c</field>
+    </columns>
+    <columns>
+        <field>Vehicle_Inspection__c.Inspection_Status__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Vehicle_Inspection__c.Damage_Cost__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Vehicle_Inspection__c.Extra_Charges__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Vehicle Inspection Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Vehicle_Inspection__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Vehicle_Inspection__c.Inspection_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

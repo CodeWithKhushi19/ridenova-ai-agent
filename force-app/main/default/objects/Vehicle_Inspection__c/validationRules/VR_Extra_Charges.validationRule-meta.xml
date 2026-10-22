@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Extra_Charges</fullName>
+    <active>true</active>
+    <description>Ensures that Extra Charges are not negative.</description>
+    <errorConditionFormula>Extra_Charges__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Extra_Charges__c</errorDisplayField>
+    <errorMessage>Extra Charges cannot be negative.</errorMessage>
+</ValidationRule>

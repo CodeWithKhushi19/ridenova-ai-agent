@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Manufacturing_Year</fullName>
+    <active>true</active>
+    <description>Ensures that the Manufacturing Year is not greater than the current year.</description>
+    <errorConditionFormula>Manufacturing_Year__c &gt; YEAR(TODAY())</errorConditionFormula>
+    <errorDisplayField>Manufacturing_Year__c</errorDisplayField>
+    <errorMessage>Manufacturing Year cannot be in the future.</errorMessage>
+</ValidationRule>
