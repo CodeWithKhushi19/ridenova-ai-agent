@@ -4,7 +4,7 @@
 
 RideNova AI turns my existing **RideNova – Vehicle & Fleet Management** Salesforce project into an AI agent. Customers chat in plain language to find free vehicles, check or cancel bookings and raise support tickets. Admins get an insights view of pending bookings and open support issues.
 
-- 🎥 **Demo video (3 min):** _add link here_
+- 🎥 **Demo video (3 min):**(https://youtu.be/7MHtEJcgDaU)
 - 💻 **Code for the agent:** [`ridenova-agent/`](ridenova-agent/)
 - ☁️ **Salesforce project (objects, fields, flows, reports):** [`force-app/`](force-app/)
 
